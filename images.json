@@ -1,13 +1,13 @@
 {
     "images": [
         {
-            "imgPath": "img/places/australia.jpg",
+            "imgPath": "img/vibes/soda.jpeg",
             "imgLocation": "Australia",
             "description": "Loch Ard Gorge",
             "date": "01/01/2016"
         },
         {
-            "imgPath": "img/places/austria.jpg",
+            "imgPath": "img/vibes/nyoom.gif",
             "imgLocation": "Austria",
             "description": "Austrian chapel",
             "date": "01/02/2016"
@@ -19,7 +19,7 @@
             "date": "01/03/2016"
         },
         {
-            "imgPath": "img/places/greece.jpg",
+            "imgPath": "img/vibes/room.jpeg",
             "imgLocation": "Greece",
             "description": "Greek coastline",
             "date": "01/04/2016"
