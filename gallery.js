@@ -1,54 +1,139 @@
-let mCurrentIndex = 0 // Tracks the current image index
-let mImages = [] // Array to hold GalleryImage objects
-const mUrl = 'https://your-json-url.com' // Replace with actual JSON URL
-const mWaitTime = 5000 // Timer interval in milliseconds
+let mCurrentIndex = 0;
+let mImages = [];
+const mWaitTime = 5000;
+let timer = null;
+
+// Exact JSON data provided
+const sampleJSON = {
+  "images": [
+    {
+      "imgPath": "img/vibes/title.jpeg",
+      "imgLocation": "Old Minecraft Title Screen",
+      "biome": "Loch Ard Gorge"
+    },
+    {
+      "imgPath": "img/vibes/village.png",
+      "imgLocation": "Village",
+      "biome": "Plains"
+    },
+    {
+      "imgPath": "img/vibes/trader-mountain.jpeg",
+      "biome": "Windswept Hills"
+    },
+    {
+      "imgPath": "img/vibes/sunflower.png",
+      "biome": "Sunflower Plains"
+    },
+    {
+      "imgPath": "img/vibes/plains.png",
+      "biome": "Plains"
+    },
+    {
+      "imgPath": "img/vibes/fields.png",
+      "biome": "Flower Forest"
+    },
+    {
+      "imgPath": "img/vibes/coral.png",
+      "imgLocation": "Warm Ocean Shipwreck",
+      "biome": "Coral Reef"
+    },
+    {
+      "imgPath": "img/vibes/beach-water.png",
+      "biome": "Beach"
+    },
+    {
+      "imgPath": "img/vibes/magic-forest.jpeg",
+      "biome": "Dark Oak Forest"
+    },
+    {
+      "imgPath": "img/vibes/lush.jpeg",
+      "biome": "Lush Caves"
+    },
+    {
+      "imgPath": "img/vibes/desert.png",
+      "imgLocation": "Desert Temple",
+      "biome": "Desert"
+    },
+    {
+      "imgPath": "img/vibes/jungle-edge.png",
+      "biome": "Jungle Edge"
+    },
+    {
+      "imgPath": "img/vibes/temple.jpeg",
+      "imgLocation": "Jungle Temple",
+      "biome": "Jungle"
+    },
+    {
+      "imgPath": "img/vibes/bamboo.webp.jpg",
+      "biome": "Bamboo Forest"
+    },
+    {
+      "imgPath": "img/places/warped-forest.webp",
+      "imgLocation": "Nether",
+      "biome": "Warped Forest"
+    },
+    {
+      "imgPath": "img/places/crimson-forest.webp",
+      "imgLocation": "Nether",
+      "biome": "Crimson Forest"
+    }
+  ]
+};
 
 $(document).ready(() => {
-  $('.details').hide() // Hide details initially
+  $('.details').hide();
 
-  // Call a function here to start the timer for the slideshow
+  // Load images from exact JSON
+  mImages = sampleJSON.images;
+  swapPhoto(); // Show first image
+  startTimer();
 
-  // Select the moreIndicator button and add a click event to:
-  // - toggle the rotation classes (rot90 and rot270)
-  // - slideToggle the visibility of the .details section
+  // More indicator toggle
+  $('.moreIndicator').on('click', function () {
+    $(this).toggleClass('rot90 rot270');
+    $('.details').slideToggle(300);
+  });
 
-  // Select the "Next Photo" button and add a click event to call showNextPhoto
+  // Navigation
+  $('#nextPhoto').on('click', showNextPhoto);
+  $('#prevPhoto').on('click', showPrevPhoto);
+});
 
-  // Select the "Previous Photo" button and add a click event to call showPrevPhoto
+function swapPhoto() {
+  if (mImages.length === 0) return;
 
-  // Call fetchJSON() to load the initial set of images
-  fetchJSON()
-})
+  const img = mImages[mCurrentIndex];
+  $('#photo').attr('src', img.imgPath);
 
-// Function to fetch JSON data and store it in mImages
-function fetchJSON () {
-  // Use $.ajax here to request the JSON data from mUrl
-  // On success, parse the JSON and push each image object into mImages array
-  // After JSON is loaded, call swapPhoto() to display the first image
+  // Only show location if imgLocation exists
+  if (img.imgLocation) {
+    $('.location').text(`Location: ${img.imgLocation}`);
+  } else {
+    $('.location').text('');
+  }
+
+  // Always show biome as description
+  $('.description').text(`Biome: ${img.biome}`);
 }
 
-// Function to swap and display the next photo in the slideshow
-function swapPhoto () {
-  // Access mImages[mCurrentIndex] to update the image source and details
-  // Update the #photo element's src attribute with the current image's path
-  // Update the .location, .description, and .date elements with the current image's details
+function showNextPhoto() {
+  mCurrentIndex = (mCurrentIndex + 1) % mImages.length;
+  swapPhoto();
+  restartTimer();
 }
 
-// Advances to the next photo, loops to the first photo if the end of array is reached
-function showNextPhoto () {
-  // Increment mCurrentIndex and call swapPhoto()
-  // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
+function showPrevPhoto() {
+  mCurrentIndex = (mCurrentIndex - 1 + mImages.length) % mImages.length;
+  swapPhoto();
+  restartTimer();
 }
 
-// Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
-function showPrevPhoto () {
-  // Decrement mCurrentIndex and call swapPhoto()
-  // Ensure it loops to the end if mCurrentIndex is less than 0
+function startTimer() {
+  if (timer) clearInterval(timer);
+  timer = setInterval(showNextPhoto, mWaitTime);
 }
 
-// Starter code for the timer function
-function startTimer () {
-  // Create a timer to automatically call `showNextPhoto()` every mWaitTime milliseconds
-  // Consider using setInterval to achieve this functionality
-  // Hint: Make sure only one timer runs at a time
+function restartTimer() {
+  clearInterval(timer);
+  timer = setInterval(showNextPhoto, mWaitTime);
 }

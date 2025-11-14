@@ -1,82 +1,75 @@
 {
     "images": [
         {
-            "imgPath": "img/vibes/soda.jpeg",
-            "imgLocation": "Australia",
-            "description": "Loch Ard Gorge",
-            "date": "01/01/2016"
+            "imgPath": "img/vibes/title.jpeg",
+            "imgLocation": "Old Minecraft Title Screen",
+            "biome": "Loch Ard Gorge"
+        },
+          {
+            "imgPath": "img/vibes/village.png",
+            "imgLocation": "Village",
+            "biome": "Plains"
         },
         {
-            "imgPath": "img/vibes/nyoom.gif",
-            "imgLocation": "Austria",
-            "description": "Austrian chapel",
-            "date": "01/02/2016"
+            "imgPath": "img/vibes/trader-mountain.jpeg",
+            "biome": "Windswept Hills"
         },
         {
-            "imgPath": "img/places/france.jpg",
-            "imgLocation": "Paris",
-            "description": "Eiffel Tower",
-            "date": "01/03/2016"
+            "imgPath": "img/vibes/sunflower.png",
+            "biome": "Sunflower Plains"
         },
         {
-            "imgPath": "img/vibes/room.jpeg",
-            "imgLocation": "Greece",
-            "description": "Greek coastline",
-            "date": "01/04/2016"
+            "imgPath": "img/vibes/plains.png",
+            "biome": "Plains"
         },
         {
-            "imgPath": "img/places/hungary.jpg",
-            "imgLocation": "Hungary",
-            "description": "Budapest skyline",
-            "date": "01/05/2016"
+            "imgPath": "img/vibes/fields.png",
+            "biome": "Flower Forest"
         },
         {
-            "imgPath": "img/places/india.jpg",
-            "imgLocation": "India",
-            "description": "Taj Mahal",
-            "date": "01/06/2016"
+            "imgPath": "img/vibes/coral.png",
+            "imgLocation": "Warm Ocean Shipwreck",
+            "biome": "Coral Reef"
         },
         {
-            "imgPath": "img/places/italy.jpg",
-            "imgLocation": "Italy",
-            "description": "Venice",
-            "date": "01/07/2016"
+            "imgPath": "img/vibes/beach-water.png",
+            "biome": "Beach"
         },
         {
-            "imgPath": "img/places/japan.jpg",
-            "imgLocation": "Japan",
-            "description": "Hirosaki Castle",
-            "date": "01/08/2016"
+            "imgPath": "img/vibes/magic-forest.jpeg",
+            "biome": "Dark Oak Forest"
         },
         {
-            "imgPath": "img/places/korea.jpg",
-            "imgLocation": "South Korea",
-            "description": "Seoul",
-            "date": "01/09/2016"
+            "imgPath": "img/vibes/lush.jpeg",
+            "biome": "Lush Caves"
         },
         {
-            "imgPath": "img/places/norway.jpg",
-            "imgLocation": "Norway",
-            "description": "Countryside mountains",
-            "date": "01/10/2016"
+            "imgPath": "img/vibes/desert.png",
+            "imgLocation": "Desert Temple",
+            "biome": "Desert"
         },
         {
-            "imgPath": "img/places/switzerland.jpg",
-            "imgLocation": "Switzerland",
-            "description": "Lake castle",
-            "date": "01/11/2016"
+            "imgPath": "img/vibes/jungle-edge.png",
+            "biome": "Jungle Edge"
         },
         {
-            "imgPath": "img/places/thailand.jpg",
-            "imgLocation": "Thailand",
-            "description": "Beachline",
-            "date": "01/12/2016"
+            "imgPath": "img/vibes/temple.jpeg",
+            "imgLocation": "Jungle Temple",
+            "biome": "Jungle"
         },
         {
-            "imgPath": "img/places/turkey.jpg",
-            "imgLocation": "Turkey",
-            "description": "Istanbul",
-            "date": "01/13/2016"
+            "imgPath": "img/vibes/bamboo.webp.jpg",
+            "biome": "Bamboo Forest"
+        },
+        {
+            "imgPath": "img/places/warped-forest.webp",
+            "imgLocation": "Nether",
+            "biome": "Warped Forest"
+        },
+        {
+            "imgPath": "img/places/crimson-forest.webp",
+            "imgLocation": "Nether",
+            "biome": "Crimson Forest"
         }
   ]
 }
