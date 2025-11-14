@@ -38,6 +38,42 @@
         {
             "imgPath": "img/vibes/magic-forest.jpeg",
             "biome": "Dark Oak Forest"
+            
+        },
+        {
+            "imgPath": "img/vibes/taiga.png",
+            "biome": "Taiga"
+        },
+ {
+            "imgPath": "img/vibes/birch-forest.png",
+            "biome": "Birch Forest"
+        },
+
+
+ {
+            "imgPath": "img/vibes/swamp.png",
+            "biome": "Swamp"
+        },
+{
+            "imgPath": "img/vibes/eroded-bad.png",
+            "biome": "Eroded Badlands"
+        },
+ {
+            "imgPath": "img/vibes/plateau-bad.png",
+            "biome": "Badlands Plateau"
+        },
+
+
+ {
+            "imgPath": "img/vibes/river.png",
+            "biome": "River"
+        },
+
+
+ {
+            "imgPath": "img/vibes/ocean.png",
+           "imgLocation": "Ocean Monument",
+           "biome": "Ocean"
         },
         {
             "imgPath": "img/vibes/lush.jpeg",
@@ -60,6 +96,21 @@
             "imgPath": "img/vibes/bamboo.png",
             "biome": "Bamboo Forest"
         },
+         {
+            "imgPath": "img/vibes/frozen-river.png",
+            "biome": "Frozen River"
+        },
+
+
+ {
+            "imgPath": "img/vibes/frozen-ocean.png",
+            "biome": "Deep Frozen Ocean"
+        },
+ {
+            "imgPath": "img/vibes/ice-spikes.png",
+            "biome": "Ice Spikes"
+        },
+
         {
             "imgPath": "img/vibes/mushroom-fields.png",
             "imgLocation": "Mushroom Island",
@@ -74,6 +125,35 @@
             "imgPath": "img/vibes/crimson-forest.png",
             "imgLocation": "Nether",
             "biome": "Crimson Forest"
+            
+        },
+         {
+            "imgPath": "img/vibes/nether-wastes.png",
+           "imgLocation": "Nether Fortress",
+           "biome": "Nether Wastes"
+        },
+ {
+            "imgPath": "img/vibes/soul-sand.png",
+           "imgLocation": "Nether",
+           "biome": "Soul Sand Valley"
+        },
+ {
+            "imgPath": "img/vibes/basalt-delta.png",
+           "imgLocation": "Nether",
+           "biome": "Basalt Delta"
         }
+         
+
+
+
+
+
+
+
+
+
+
+
+
   ]
 }
