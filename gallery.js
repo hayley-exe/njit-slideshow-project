@@ -59,21 +59,25 @@ const sampleJSON = {
       "biome": "Jungle Edge"
     },
     {
-      "imgPath": "img/vibes/temple.jpeg",
-      "imgLocation": "Jungle Temple",
+      "imgPath": "img/vibes/jungle.png",
       "biome": "Jungle"
     },
     {
-      "imgPath": "img/vibes/bamboo.webp.jpg",
+      "imgPath": "img/vibes/bamboo.png",
       "biome": "Bamboo Forest"
     },
     {
-      "imgPath": "img/places/warped-forest.webp",
+      "imgPath": "img/places/mushroom-fields.png",
+      "imgLocation": "Mushroom Island",
+      "biome": "Mushroom Fields"
+    },
+    {
+      "imgPath": "img/places/warped-forest.png",
       "imgLocation": "Nether",
       "biome": "Warped Forest"
     },
     {
-      "imgPath": "img/places/crimson-forest.webp",
+      "imgPath": "img/places/crimson-forest.png",
       "imgLocation": "Nether",
       "biome": "Crimson Forest"
     }
