@@ -9,7 +9,6 @@ const sampleJSON = {
     {
       "imgPath": "img/vibes/title.jpeg",
       "imgLocation": "Old Minecraft Title Screen",
-      "biome": "Title Screen"
     },
     {
       "imgPath": "img/vibes/village.png",
