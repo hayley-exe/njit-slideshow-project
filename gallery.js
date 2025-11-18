@@ -18,7 +18,6 @@ const sampleJSON = {
     },
     {
       "imgPath": "img/vibes/trader-mountain.jpeg",
-      "imgLocation": "Wandering Trader in Mountains",
       "biome": "Windswept Hills"
     },
     {
