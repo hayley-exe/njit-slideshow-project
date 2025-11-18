@@ -3,12 +3,13 @@ let mImages = [];
 const mWaitTime = 5000;
 let timer = null;
 
-// Complete JSON with all images and consistent imgLocation fields
+// Complete JSON with all images and consistent imgLocation/biome fields
 const sampleJSON = {
   "images": [
     {
       "imgPath": "img/vibes/title.jpeg",
-      "imgLocation": "Old Minecraft Title Screen"
+      "imgLocation": "Old Minecraft Title Screen",
+      "biome": "Title Screen"
     },
     {
       "imgPath": "img/vibes/village.png",
@@ -22,17 +23,17 @@ const sampleJSON = {
     },
     {
       "imgPath": "img/vibes/sunflower.png",
-      "imgLocation": "Sunflower Fields",
+      "imgLocation": "Distant Pillager Outpost",
       "biome": "Sunflower Plains"
     },
     {
       "imgPath": "img/vibes/plains.png",
-      "imgLocation": "Open Plains",
+      "imgLocation": "Distant Village",
       "biome": "Plains"
     },
     {
       "imgPath": "img/vibes/fields.png",
-      "imgLocation": "Flower Fields",
+      "imgLocation": "Moobloom Meadows",
       "biome": "Flower Forest"
     },
     {
@@ -42,42 +43,34 @@ const sampleJSON = {
     },
     {
       "imgPath": "img/vibes/beach-water.png",
-      "imgLocation": "Sandy Beach",
       "biome": "Beach"
     },
     {
       "imgPath": "img/vibes/magic-forest.jpeg",
-      "imgLocation": "Enchanted Dark Forest",
-      "biome": "Dark Oak Forest"
+      "biome": "Dark Forest"
     },
     {
       "imgPath": "img/vibes/taiga.png",
-      "imgLocation": "Snowy Taiga Village",
       "biome": "Taiga"
     },
     {
       "imgPath": "img/vibes/birch-forest.png",
-      "imgLocation": "Birch Forest Hills",
       "biome": "Birch Forest"
     },
     {
       "imgPath": "img/vibes/swamp.png",
-      "imgLocation": "Witch Hut Swamp",
       "biome": "Swamp"
     },
     {
       "imgPath": "img/vibes/eroded-bad.png",
-      "imgLocation": "Eroded Badlands Canyon",
       "biome": "Eroded Badlands"
     },
     {
       "imgPath": "img/vibes/plateau-bad.png",
-      "imgLocation": "Badlands Plateau",
       "biome": "Badlands Plateau"
     },
     {
       "imgPath": "img/vibes/river.png",
-      "imgLocation": "River Valley",
       "biome": "River"
     },
     {
@@ -97,32 +90,26 @@ const sampleJSON = {
     },
     {
       "imgPath": "img/vibes/jungle-edge.png",
-      "imgLocation": "Jungle Edge Transition",
       "biome": "Jungle Edge"
     },
     {
       "imgPath": "img/vibes/jungle.png",
-      "imgLocation": "Dense Jungle",
       "biome": "Jungle"
     },
     {
       "imgPath": "img/vibes/bamboo.png",
-      "imgLocation": "Bamboo Jungle",
-      "biome": "Bamboo Forest"
+      "biome": "Bamboo Jungle"
     },
     {
       "imgPath": "img/vibes/frozen-river.png",
-      "imgLocation": "Frozen River",
       "biome": "Frozen River"
     },
     {
       "imgPath": "img/vibes/frozen-ocean.png",
-      "imgLocation": "Deep Frozen Ocean",
-      "biome": "Deep Frozen Ocean"
+      "biome": "Frozen Ocean"
     },
     {
       "imgPath": "img/vibes/ice-spikes.png",
-      "imgLocation": "Ice Spikes Biome",
       "biome": "Ice Spikes"
     },
     {
@@ -132,12 +119,12 @@ const sampleJSON = {
     },
     {
       "imgPath": "img/vibes/warped-forest.png",
-      "imgLocation": "Warped Forest",
+      "imgLocation": "Nether",
       "biome": "Warped Forest"
     },
     {
       "imgPath": "img/vibes/crimson-forest.png",
-      "imgLocation": "Crimson Forest",
+      "imgLocation": "Nether",
       "biome": "Crimson Forest"
     },
     {
@@ -147,13 +134,13 @@ const sampleJSON = {
     },
     {
       "imgPath": "img/vibes/soul-valley.png",
-      "imgLocation": "Soul Sand Valley",
+      "imgLocation": "Nether",
       "biome": "Soul Sand Valley"
     },
     {
       "imgPath": "img/vibes/basalt-delta.png",
-      "imgLocation": "Basalt Deltas",
-      "biome": "Basalt Delta"
+      "imgLocation": "Nether",
+      "biome": "Basalt Deltas"
     }
   ]
 };
@@ -185,15 +172,15 @@ function swapPhoto() {
     $(this).addClass('loaded');
   });
 
-  // Show location if exists, otherwise hide
+  // Show location only if it exists
   if (img.imgLocation) {
     $('.location').text(`Location: ${img.imgLocation}`).show();
   } else {
     $('.location').hide();
   }
 
-  // Always show biome
-  $('.description').text(`${img.biome}`);
+  // Every image now has biome - safe to display
+  $('.description').text(`Biome: ${img.biome}`);
 }
 
 function showNextPhoto() {

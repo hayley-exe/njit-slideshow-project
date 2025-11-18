@@ -15,10 +15,11 @@
         },
         {
             "imgPath": "img/vibes/sunflower.png",
-            "biome": "Sunflower Plains"
+            "biome": "Sunflower Fields"
         },
         {
             "imgPath": "img/vibes/plains.png",
+             "imgLocation": "Distant Village",
             "biome": "Plains"
         },
         {
