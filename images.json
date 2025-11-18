@@ -2,8 +2,7 @@
     "images": [
         {
             "imgPath": "img/vibes/title.jpeg",
-            "imgLocation": "Old Minecraft Title Screen",
-            "biome": "Loch Ard Gorge"
+            "imgLocation": "Old Minecraft Title Screen"
         },
           {
             "imgPath": "img/vibes/village.png",
@@ -133,7 +132,7 @@
            "biome": "Nether Wastes"
         },
  {
-            "imgPath": "img/vibes/soul-sand.png",
+            "imgPath": "img/vibes/soul-valley.png",
            "imgLocation": "Nether",
            "biome": "Soul Sand Valley"
         },

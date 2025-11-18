@@ -8,8 +8,7 @@ const sampleJSON = {
   "images": [
     {
       "imgPath": "img/vibes/title.jpeg",
-      "imgLocation": "Old Minecraft Title Screen",
-      "biome": "Loch Ard Gorge"
+      "imgLocation": "Old Minecraft Title Screen"
     },
     {
       "imgPath": "img/vibes/village.png",
@@ -147,7 +146,7 @@ const sampleJSON = {
       "biome": "Nether Wastes"
     },
     {
-      "imgPath": "img/vibes/soul-sand.png",
+      "imgPath": "img/vibes/soul-valley.png",
       "imgLocation": "Soul Sand Valley",
       "biome": "Soul Sand Valley"
     },
