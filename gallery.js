@@ -47,7 +47,7 @@ const sampleJSON = {
     },
     {
       "imgPath": "img/vibes/magic-forest.jpeg",
-      "biome": "Dark Forest"
+      "biome": "Dark Oak Forest"
     },
     {
       "imgPath": "img/vibes/taiga.png",
